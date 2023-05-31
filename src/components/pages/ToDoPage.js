@@ -1,6 +1,7 @@
 import { TaskItem } from "../molecules/TaskItem/TaskItem";
 import { Footer } from "../organisms/Footer/Footer";
 import { Header } from "../organisms/Header/Header";
+import { TaskList } from "../organisms/TaskList/TaskList";
 import "./ToDoPage.css";
 
 function ToDoPage() {
@@ -8,7 +9,7 @@ function ToDoPage() {
     <div>
       <div className="ImageBckg"></div>
       <Header />
-      <TaskItem />
+      <TaskList />
       <Footer />
     </div>
   );
