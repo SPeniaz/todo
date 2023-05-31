@@ -1,5 +1,6 @@
-import { TaskInput } from "../molecules/TaskInput/TaskInput";
+import { TaskInput } from "../atoms/TaskInput/TaskInput";
 import { TaskItem } from "../molecules/TaskItem/TaskItem";
+import { TaskSort } from "../molecules/TaskSort/TaskSort";
 import "./ToDoPage.css";
 
 function ToDoPage() {
@@ -8,6 +9,7 @@ function ToDoPage() {
       <div className="ImageBckg"></div>
       <TaskInput />
       <TaskItem />
+      <TaskSort />
     </div>
   );
 }
