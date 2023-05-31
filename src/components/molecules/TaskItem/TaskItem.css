@@ -1,0 +1,5 @@
+.TaskItem{
+    display: flex;
+    padding-bottom: 5px;
+    border-bottom: solid 1px gray;
+}

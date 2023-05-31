@@ -1,0 +1,15 @@
+.TaskCompletedCheckBox {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.TaskCompletedCheckBox:checked {
+  background-color: gray;
+}
