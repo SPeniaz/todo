@@ -1,0 +1,8 @@
+.TaskCounter {
+  height: 40px;
+  box-sizing: border-box;
+  border: none;
+  font-family: Jost, sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+}
