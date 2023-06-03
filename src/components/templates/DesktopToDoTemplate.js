@@ -6,7 +6,12 @@ import "./DesktopToDoTemplate.css";
 
 import { v4 as uuidv4 } from "uuid";
 
-export const DesktopToDoTemplate = ({ tasks, onAddTask, onDeleteTask, onMarkCompleted }) => {
+export const DesktopToDoTemplate = ({
+  tasks,
+  onAddTask,
+  onDeleteTask,
+  onMarkCompleted,
+}) => {
   const onAddNewTask = (description) => {
     const newTask = {
       id: uuidv4(),
@@ -15,9 +20,10 @@ export const DesktopToDoTemplate = ({ tasks, onAddTask, onDeleteTask, onMarkComp
     };
 
     onAddTask(newTask);
-
-    //console.log(newTask);
   };
+
+  const completedTasks = tasks.filter((el) => el.completed).length;
+  const counterValue = tasks.length - completedTasks;
 
   return (
     <div>
@@ -25,8 +31,12 @@ export const DesktopToDoTemplate = ({ tasks, onAddTask, onDeleteTask, onMarkComp
       <div className="DesktopToDoTemplate">
         <Header onEnterPress={onAddNewTask} />
         <div className="Content">
-          <TaskList tasks={tasks} onDeleteTask={onDeleteTask} onMarkCompleted ={onMarkCompleted} />
-          <Footer />
+          <TaskList
+            tasks={tasks}
+            onDeleteTask={onDeleteTask}
+            onMarkCompleted={onMarkCompleted}
+          />
+          <Footer counterValue={counterValue} />
         </div>
       </div>
     </div>
