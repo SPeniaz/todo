@@ -1,7 +1,9 @@
 .Footer{
     display: flex;
     justify-content: space-between;
-    margin: 20px 0 20px 0;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 .Footer .TaskCounter{

@@ -4,12 +4,12 @@ import { TaskCompletedCheckBox } from "../../atoms/TaskCompletedCheckBox/TaskCom
 import { TaskDeleteBtn } from "../../atoms/TaskDeleteBtn/TaskDeleteBtn";
 import "./TaskItem.css";
 
-export const TaskItem = ({ task }) => {
+export const TaskItem = ({ task, onDeleteTask }) => {
   return (
     <div className="TaskItem">
       <TaskCompletedCheckBox />
       <Task description={task.description} />
-      <TaskDeleteBtn />
+      <TaskDeleteBtn onDeleteClick={onDeleteTask} taskId={task.id} />
     </div>
   );
 };

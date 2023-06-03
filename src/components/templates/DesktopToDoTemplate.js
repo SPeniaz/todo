@@ -6,7 +6,7 @@ import "./DesktopToDoTemplate.css";
 
 import { v4 as uuidv4 } from "uuid";
 
-export const DesktopToDoTemplate = ({ tasks, onAddTask }) => {
+export const DesktopToDoTemplate = ({ tasks, onAddTask, onDeleteTask }) => {
   const onAddNewTask = (description) => {
     const newTask = {
       id: uuidv4(),
@@ -25,7 +25,7 @@ export const DesktopToDoTemplate = ({ tasks, onAddTask }) => {
       <div className="DesktopToDoTemplate">
         <Header onEnterPress={onAddNewTask} />
         <div className="Content">
-          <TaskList tasks={tasks} />
+          <TaskList tasks={tasks} onDeleteTask={onDeleteTask} />
           <Footer />
         </div>
       </div>

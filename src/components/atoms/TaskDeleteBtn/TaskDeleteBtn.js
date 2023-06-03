@@ -1,8 +1,10 @@
-import React from 'react'
-import './TaskDeleteBtn.css'
+import React from "react";
+import "./TaskDeleteBtn.css";
 
-export const TaskDeleteBtn = () => {
+export const TaskDeleteBtn = ({ onDeleteClick, taskId }) => {
   return (
-    <button className="TaskDeleteBtn">&#x2716;</button>
-  )
-}
+    <button className="TaskDeleteBtn" onClick={() => onDeleteClick(taskId)}>
+      &#x2716;
+    </button>
+  );
+};
