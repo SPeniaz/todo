@@ -1,8 +1,8 @@
 import React from 'react'
 import './Task.css'
 
-export const Task = () => {
+export const Task = ({description}) => {
   return (
-    <div className="Task">Task</div>
+    <div className="Task">{description}</div>
   )
 }

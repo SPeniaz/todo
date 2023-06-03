@@ -4,17 +4,17 @@ import {
   addTask
 } from "../../redux/slicers/TaskSlicer"
 
-import {useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 function ToDoPage() {
-
+  const tasks = useSelector((state) => state.tasks.tasks);
 
   const dispatch = useDispatch();
 
 
   return (
     <DesktopToDoTemplate
-      //tasks = {tasks}
+      tasks = {tasks}
       onAddTask={(task) => dispatch(addTask(task))}/>
   );
 }
