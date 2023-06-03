@@ -4,14 +4,28 @@ import { TaskList } from "../organisms/TaskList/TaskList";
 import { Footer } from "../organisms/Footer/Footer";
 import "./DesktopToDoTemplate.css";
 
-export const DesktopToDoTemplate = () => {
+import { v4 as uuidv4 } from "uuid";
+
+export const DesktopToDoTemplate = ({ tasks, onAddTask }) => {
+  const onAddNewTask = (description) => {
+    const newTask = {
+      id: uuidv4(),
+      description: description,
+      completed: false,
+    };
+
+    onAddTask(newTask);
+
+    //console.log(newTask);
+  };
+
   return (
     <div>
       <div className="ImageBckg"></div>
       <div className="DesktopToDoTemplate">
-        <Header />
+        <Header onEnterPress={onAddNewTask} />
         <div className="Content">
-          <TaskList />
+          <TaskList tasks={tasks} />
           <Footer />
         </div>
       </div>
