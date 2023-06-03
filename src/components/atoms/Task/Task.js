@@ -1,8 +1,10 @@
-import React from 'react'
-import './Task.css'
+import React from "react";
+import "./Task.css";
 
-export const Task = ({description}) => {
+export const Task = ({ description, completed }) => {
   return (
-    <div className="Task">{description}</div>
-  )
-}
+    <div className={`Task ${completed ? "TaskInActive" : ""}`}>
+      {description}
+    </div>
+  );
+};
