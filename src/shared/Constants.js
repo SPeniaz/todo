@@ -3,3 +3,5 @@ export const FILTER = {
     ACTIVE: 'Active',
     COMPLETED: 'Completed',
   };
+
+export const CLEAR_COMPLETED = 'Clear completed'

@@ -1,4 +1,5 @@
 import React from "react";
+import { CLEAR_COMPLETED } from "../../../shared/Constants";
 import { TaskCounter } from "../../atoms/TaskCounter/TaskCounter";
 import { TaskFilterBtn } from "../../atoms/TasksFilterBtn/TaskFilterBtn";
 import { TaskSort } from "../../molecules/TaskSort/TaskSort";
@@ -11,7 +12,7 @@ export const Footer = ({ counterValue, onClearCompleted }) => {
       <TaskCounter count={count} />
       <TaskSort />
       <TaskFilterBtn onClearCompleted={onClearCompleted}>
-        Clear Completed
+        {CLEAR_COMPLETED}
       </TaskFilterBtn>
     </div>
   );
