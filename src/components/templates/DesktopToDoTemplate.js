@@ -11,7 +11,7 @@ export const DesktopToDoTemplate = ({
   onAddTask,
   onDeleteTask,
   onMarkCompleted,
-  onClearCompleted
+  onClearCompleted,
 }) => {
   const onAddNewTask = (description) => {
     const newTask = {
@@ -37,7 +37,10 @@ export const DesktopToDoTemplate = ({
             onDeleteTask={onDeleteTask}
             onMarkCompleted={onMarkCompleted}
           />
-          <Footer counterValue={counterValue} onClearCompleted = {onClearCompleted} />
+          <Footer
+            counterValue={counterValue}
+            onClearCompleted={onClearCompleted}
+          />
         </div>
       </div>
     </div>
