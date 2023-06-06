@@ -8,10 +8,13 @@ import { v4 as uuidv4 } from "uuid";
 
 export const DesktopToDoTemplate = ({
   tasks,
+  filterValue,
+  filteredTasks,
   onAddTask,
   onDeleteTask,
   onMarkCompleted,
   onClearCompleted,
+  onChangeFilter,
 }) => {
   const onAddNewTask = (description) => {
     const newTask = {
@@ -33,12 +36,14 @@ export const DesktopToDoTemplate = ({
         <Header onEnterPress={onAddNewTask} />
         <div className="Content">
           <TaskList
-            tasks={tasks}
+            tasks={filteredTasks?.length > 0 ? filteredTasks : []}
             onDeleteTask={onDeleteTask}
             onMarkCompleted={onMarkCompleted}
           />
           <Footer
             counterValue={counterValue}
+            onChangeFilter={onChangeFilter}
+            filterValue ={filterValue}
             onClearCompleted={onClearCompleted}
           />
         </div>

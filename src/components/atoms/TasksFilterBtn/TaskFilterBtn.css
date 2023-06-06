@@ -8,3 +8,13 @@
   border: none;
   background-color: transparent;
 }
+
+.TaskFilterBtn:hover{
+  color: cornflowerblue;
+}
+
+
+.Active {
+  color: cornflowerblue;
+}
+
