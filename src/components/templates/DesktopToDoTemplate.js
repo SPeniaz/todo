@@ -15,6 +15,7 @@ export const DesktopToDoTemplate = ({
   onMarkCompleted,
   onClearCompleted,
   onChangeFilter,
+  onReoderTasks
 }) => {
   const onAddNewTask = (description) => {
     const newTask = {
@@ -39,6 +40,7 @@ export const DesktopToDoTemplate = ({
             tasks={filteredTasks?.length > 0 ? filteredTasks : []}
             onDeleteTask={onDeleteTask}
             onMarkCompleted={onMarkCompleted}
+            onReoderTasks = {onReoderTasks}
           />
           <Footer
             counterValue={counterValue}

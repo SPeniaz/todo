@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {FILTER} from '../../shared/Constants'
+import { FILTER } from "../../shared/Constants";
 
 const initialState = {
   tasks: [],
@@ -31,11 +31,29 @@ export const tasksSlice = createSlice({
     },
     filterChange: (state, action) => {
       state.filter = action.payload;
-    }
+    },
+    reoderTasks: (state, action) => {
+      const fromIndex = state.tasks.findIndex(
+        (task) => task.id === action.payload.fromId
+      );
+      const toIndex = state.tasks.findIndex(
+        (task) => task.id === action.payload.toId
+      );
+      const element = state.tasks[fromIndex];
+      state.tasks.splice(fromIndex, 1);
+      state.tasks.splice(toIndex, 0, element);
+    },
   },
 });
 
-export const { addTask, deleteTask, markCompleted, clearCompletedTasks, loadTasks, filterChange } =
-  tasksSlice.actions;
+export const {
+  addTask,
+  deleteTask,
+  markCompleted,
+  clearCompletedTasks,
+  loadTasks,
+  filterChange,
+  reoderTasks,
+} = tasksSlice.actions;
 
 export default tasksSlice.reducer;

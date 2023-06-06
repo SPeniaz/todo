@@ -7,6 +7,7 @@ import {
   clearCompletedTasks,
   loadTasks,
   filterChange,
+  reoderTasks,
 } from "../../redux/slicers/TaskSlicer";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -39,6 +40,9 @@ function ToDoPage() {
       onChangeFilter={(filter) => dispatch(filterChange(filter))}
       onMarkCompleted={(task) => dispatch(markCompleted(task))}
       onClearCompleted={() => dispatch(clearCompletedTasks())}
+      onReoderTasks={({ fromId, toId }) =>
+        dispatch(reoderTasks({ fromId, toId }))
+      }
     />
   );
 }
