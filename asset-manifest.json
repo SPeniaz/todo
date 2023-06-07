@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/todo/static/css/main.13c7e21b.css",
+    "main.js": "/todo/static/js/main.4ef74e11.js",
+    "static/media/swiss.jpg": "/todo/static/media/swiss.ce6cf565f77ead969118.jpg",
+    "index.html": "/todo/index.html",
+    "main.13c7e21b.css.map": "/todo/static/css/main.13c7e21b.css.map",
+    "main.4ef74e11.js.map": "/todo/static/js/main.4ef74e11.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13c7e21b.css",
+    "static/js/main.4ef74e11.js"
+  ]
+}
