@@ -1,14 +1,13 @@
-import React from "react";
-import "./TaskInput.css";
-import { useRef } from "react";
+import React, { useRef } from 'react';
+import './TaskInput.css';
 
-export const TaskInput = ({ onEnterPress }) => {
+export function TaskInput({ onEnterPress }) {
   const inputRef = useRef(null);
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && e.target.value) {
       onEnterPress(e.target.value);
-      inputRef.current.value = "";
+      inputRef.current.value = '';
     }
   };
 
@@ -19,6 +18,8 @@ export const TaskInput = ({ onEnterPress }) => {
       className="TaskInput"
       ref={inputRef}
       onKeyDown={handleKeyDown}
-    ></input>
+    />
   );
-};
+}
+
+export default TaskInput;

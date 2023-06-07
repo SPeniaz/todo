@@ -1,12 +1,12 @@
-import React from "react";
-import { Header } from "../organisms/Header/Header";
-import { TaskList } from "../organisms/TaskList/TaskList";
-import { Footer } from "../organisms/Footer/Footer";
-import "./DesktopToDoTemplate.css";
+import { v4 as uuidv4 } from 'uuid';
 
-import { v4 as uuidv4 } from "uuid";
+import React from 'react';
+import { Header } from '../organisms/Header/Header';
+import { TaskList } from '../organisms/TaskList/TaskList';
+import { Footer } from '../organisms/Footer/Footer';
+import './DesktopToDoTemplate.css';
 
-export const DesktopToDoTemplate = ({
+export function DesktopToDoTemplate({
   tasks,
   filterValue,
   filteredTasks,
@@ -15,12 +15,12 @@ export const DesktopToDoTemplate = ({
   onMarkCompleted,
   onClearCompleted,
   onChangeFilter,
-  onReoderTasks
-}) => {
+  onReoderTasks,
+}) {
   const onAddNewTask = (description) => {
     const newTask = {
       id: uuidv4(),
-      description: description,
+      description,
       completed: false,
     };
 
@@ -32,7 +32,7 @@ export const DesktopToDoTemplate = ({
 
   return (
     <div>
-      <div className="ImageBckg"></div>
+      <div className="ImageBckg" />
       <div className="DesktopToDoTemplate">
         <Header onEnterPress={onAddNewTask} />
         <div className="Content">
@@ -40,16 +40,18 @@ export const DesktopToDoTemplate = ({
             tasks={filteredTasks?.length > 0 ? filteredTasks : []}
             onDeleteTask={onDeleteTask}
             onMarkCompleted={onMarkCompleted}
-            onReoderTasks = {onReoderTasks}
+            onReoderTasks={onReoderTasks}
           />
           <Footer
             counterValue={counterValue}
             onChangeFilter={onChangeFilter}
-            filterValue ={filterValue}
+            filterValue={filterValue}
             onClearCompleted={onClearCompleted}
           />
         </div>
       </div>
     </div>
   );
-};
+}
+
+export default DesktopToDoTemplate;

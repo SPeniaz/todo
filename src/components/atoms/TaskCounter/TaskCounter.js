@@ -1,11 +1,13 @@
-import React from "react";
-import './TaskCounter.css'
+import React from 'react';
+import './TaskCounter.css';
 
-export const TaskCounter = ({count}) => {
+function TaskCounter({ count }) {
   return (
     <div className="TaskCounter">
       {count} item
-      {count !== 1 && "s"} left
+      {count !== 1 && 's'} left
     </div>
   );
-};
+}
+
+export default TaskCounter;

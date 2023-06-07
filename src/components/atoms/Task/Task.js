@@ -1,10 +1,8 @@
-import React from "react";
-import "./Task.css";
+import React from 'react';
+import './Task.css';
 
-export const Task = ({ description, completed }) => {
-  return (
-    <div className={`Task ${completed ? "TaskInActive" : ""}`}>
-      {description}
-    </div>
-  );
-};
+export function Task({ description, completed }) {
+  return <div className={`Task ${completed ? 'TaskInActive' : ''}`}>{description}</div>;
+}
+
+export default Task;

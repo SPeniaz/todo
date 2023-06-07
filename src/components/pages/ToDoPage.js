@@ -1,5 +1,9 @@
-import { DesktopToDoTemplate } from "../templates/DesktopToDoTemplate";
-import "./ToDoPage.css";
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import getFilteredTasks from '../../redux/selectors/TasksSelector';
+
+import { DesktopToDoTemplate } from '../templates/DesktopToDoTemplate';
+import './ToDoPage.css';
 import {
   addTask,
   deleteTask,
@@ -8,11 +12,7 @@ import {
   loadTasks,
   filterChange,
   reoderTasks,
-} from "../../redux/slicers/TaskSlicer";
-
-import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
-import getFilteredTasks from "../../redux/selectors/TasksSelector";
+} from '../../redux/slicers/TaskSlicer';
 
 function ToDoPage() {
   const tasks = useSelector((state) => state.tasks.tasks);
@@ -22,11 +22,11 @@ function ToDoPage() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const storedTasks = localStorage.getItem("tasksLS");
+    const storedTasks = localStorage.getItem('tasksLS');
 
     if (storedTasks) {
-      const tasks = JSON.parse(storedTasks);
-      dispatch(loadTasks(tasks));
+      const parsedTasks = JSON.parse(storedTasks);
+      dispatch(loadTasks(parsedTasks));
     }
   }, [dispatch]);
 
@@ -40,9 +40,7 @@ function ToDoPage() {
       onChangeFilter={(filter) => dispatch(filterChange(filter))}
       onMarkCompleted={(task) => dispatch(markCompleted(task))}
       onClearCompleted={() => dispatch(clearCompletedTasks())}
-      onReoderTasks={({ fromId, toId }) =>
-        dispatch(reoderTasks({ fromId, toId }))
-      }
+      onReoderTasks={({ fromId, toId }) => dispatch(reoderTasks({ fromId, toId }))}
     />
   );
 }

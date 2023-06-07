@@ -1,25 +1,12 @@
-import React from "react";
-import { TaskItem } from "../../molecules/TaskItem/TaskItem";
-import "./TaskList.css";
-import {
-  SortableContext,
-  verticalListSortingStrategy,
-} from "@dnd-kit/sortable";
+import React from 'react';
+import './TaskList.css';
+import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
 
-import {
-  DndContext,
-  PointerSensor,
-  closestCenter,
-  useSensor,
-  useSensors,
-} from "@dnd-kit/core";
+import { DndContext, PointerSensor, closestCenter, useSensor, useSensors } from '@dnd-kit/core';
+// eslint-disable-next-line import/no-named-as-default
+import TaskItem from '../../molecules/TaskItem/TaskItem';
 
-export const TaskList = ({
-  tasks,
-  onDeleteTask,
-  onMarkCompleted,
-  onReoderTasks,
-}) => {
+export function TaskList({ tasks, onDeleteTask, onMarkCompleted, onReoderTasks }) {
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
@@ -37,11 +24,7 @@ export const TaskList = ({
 
   return (
     <div className="TaskList">
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCenter}
-        onDragEnd={handleDtragEnd}
-      >
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDtragEnd}>
         <SortableContext items={tasks} strategy={verticalListSortingStrategy}>
           {tasks.map((task) => (
             <TaskItem
@@ -56,4 +39,6 @@ export const TaskList = ({
       </DndContext>
     </div>
   );
-};
+}
+
+export default TaskList;

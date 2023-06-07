@@ -1,10 +1,12 @@
-import React from "react";
-import "./TaskDeleteBtn.css";
+import React from 'react';
+import './TaskDeleteBtn.css';
 
-export const TaskDeleteBtn = ({ onDeleteClick, taskId }) => {
+export function TaskDeleteBtn({ onDeleteClick, taskId }) {
   return (
-    <button className="TaskDeleteBtn" onClick={() => onDeleteClick(taskId)}>
+    <button type="button" className="TaskDeleteBtn" onClick={() => onDeleteClick(taskId)}>
       &#x2716;
     </button>
   );
-};
+}
+
+export default TaskDeleteBtn;
