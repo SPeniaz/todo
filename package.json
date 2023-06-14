@@ -23,8 +23,18 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom --watchAll=false --coverage",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 20,
+        "branches": 20,
+        "functions": 20,
+        "lines": 20
+      }
+    }
   },
   "eslintConfig": {
     "extends": [
