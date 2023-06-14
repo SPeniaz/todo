@@ -1,7 +1,7 @@
 import React from 'react';
 import './TaskCounter.css';
 
-function TaskCounter({ count }) {
+export function TaskCounter({ count }) {
   return (
     <div className="TaskCounter">
       {count} item

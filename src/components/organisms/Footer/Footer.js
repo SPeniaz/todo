@@ -1,6 +1,7 @@
 import React from 'react';
 import { CLEAR_COMPLETED } from '../../../shared/Constants';
-import TaskCounter from '../../atoms/TaskCounter/TaskCounter';
+
+import { TaskCounter } from '../../atoms/TaskCounter/TaskCounter';
 import { TaskFilterBtn } from '../../atoms/TasksFilterBtn/TaskFilterBtn';
 import { TaskSort } from '../../molecules/TaskSort/TaskSort';
 import './Footer.css';

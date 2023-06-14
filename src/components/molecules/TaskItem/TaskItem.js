@@ -1,11 +1,11 @@
 import React from "react";
 import { useSortable } from '@dnd-kit/sortable';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { CSS } from "@dnd-kit/utilities"
 import { Task } from "../../atoms/Task/Task";
 import { TaskDeleteBtn } from "../../atoms/TaskDeleteBtn/TaskDeleteBtn";
 import "./TaskItem.css";
-import TaskCompletedCheckBox from "../../atoms/TaskCompletedCheckBox/TaskCompletedCheckBox";
+
+import {TaskCompletedCheckBox} from "../../atoms/TaskCompletedCheckBox/TaskCompletedCheckBox";
 
 export function TaskItem({ task, onDeleteTask, onMarkCompleted, ...props }) {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({

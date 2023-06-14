@@ -3,8 +3,7 @@ import './TaskList.css';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
 
 import { DndContext, PointerSensor, closestCenter, useSensor, useSensors } from '@dnd-kit/core';
-// eslint-disable-next-line import/no-named-as-default
-import TaskItem from '../../molecules/TaskItem/TaskItem';
+import {TaskItem} from '../../molecules/TaskItem/TaskItem';
 
 export function TaskList({ tasks, onDeleteTask, onMarkCompleted, onReoderTasks }) {
   const sensors = useSensors(

@@ -1,7 +1,8 @@
 import React from "react";
 import "./TaskCompletedCheckBox.css";
 
-function TaskCompletedCheckBox({checked, onCheck}) {
+
+export function TaskCompletedCheckBox({checked, onCheck}) {
   return (
     <input
       type="checkbox"
@@ -12,4 +13,4 @@ function TaskCompletedCheckBox({checked, onCheck}) {
   );
 }
 
-export default TaskCompletedCheckBox;
+export default TaskCompletedCheckBox
