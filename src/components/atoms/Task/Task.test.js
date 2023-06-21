@@ -15,7 +15,7 @@ describe('Task', () => {
 
   test('applies "TaskInActive" class when completed is true', () => {
     const description = 'Sample Task';
-    const { container } = render(<Task description={description} completed={true} />);
+    const { container } = render(<Task description={description} completed />);
     const taskElement = container.firstChild;
 
     expect(taskElement).toHaveClass('Task');

@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 
 describe('TaskCompletedCheckBox', () => {
   test('renders correctly', () => {
-    const { getByRole } = render(<CheckBox checked={false} onChange={() => {}} />);
+    const { getByRole } = render(<CheckBox label='Label' checked={false} onChange={() => {}} />);
     const checkbox = getByRole('checkbox');
 
     expect(checkbox).toBeInTheDocument();

@@ -1,7 +1,6 @@
 import React from "react";
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from "@dnd-kit/utilities"
-import { Task } from "../../atoms/Task/Task";
 import { DeleteBtn } from "../../atoms/DeleteBtn/DeleteBtn";
 import "./TaskItem.css";
 
@@ -21,9 +20,9 @@ export function TaskItem({ task, onDeleteTask, onMarkCompleted, ...props }) {
     <div className="TaskItem" style={style} ref={setNodeRef} {...attributes} {...listeners}>
       <CheckBox
         checked={task.completed}
+        label={task.description}
         onChange={(checked) => onMarkCompleted({ id: task.id, completed: checked })}
       />
-      <Task description={task.description} completed={task.completed}/>
       <DeleteBtn onClick={onDeleteTask} id={task.id} />
     </div>
   );
