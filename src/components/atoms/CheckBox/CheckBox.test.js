@@ -18,8 +18,8 @@ describe('TaskCompletedCheckBox', () => {
     const { getByRole } = render(<CheckBox checked={false} onChange={onCheck} />);
     const checkbox = getByRole('checkbox');
 
+    expect(checkbox.checked).toBe(false);
     fireEvent.click(checkbox);
-
     expect(onCheck).toHaveBeenCalledWith(true);
   });
 
