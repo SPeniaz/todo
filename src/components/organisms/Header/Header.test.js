@@ -7,7 +7,7 @@ describe('Header', () => {
   const onEnterPress = jest.fn();
 
   test('renders Header with correct title', () => {
-    const { getByText } = render(<Header onEnterPress={onEnterPress} />);
+    const { getByText } = render(<Header onSubmit={onEnterPress} />);
 
     const titleElement = getByText('TO DO');
 
@@ -15,7 +15,7 @@ describe('Header', () => {
   });
 
   test('calls onEnterPress with correct value when Enter key is pressed', () => {
-    const { getByPlaceholderText } = render(<Header onEnterPress={onEnterPress} />);
+    const { getByPlaceholderText } = render(<Header onSubmit={onEnterPress} />);
 
     const inputElement = getByPlaceholderText('Write new task and press Enter');
 

@@ -1,12 +1,13 @@
 import React, { useRef } from 'react';
-import './TaskInput.css';
+import './TextInput.css';
 
-export function TaskInput({ onEnterPress }) {
+export function TextInput({ onSubmit, placeholder }) {
+  const defaultPlaceholder = 'Enter data';
   const inputRef = useRef(null);
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' && e.target.value) {
-      onEnterPress(e.target.value);
+      onSubmit(e.target.value);
       inputRef.current.value = '';
     }
   };
@@ -14,12 +15,12 @@ export function TaskInput({ onEnterPress }) {
   return (
     <input
       type="text"
-      placeholder="Write new task and press Enter"
-      className="TaskInput"
+      placeholder={placeholder || defaultPlaceholder }
+      className="TextInput"
       ref={inputRef}
       onKeyDown={handleKeyDown}
     />
   );
 }
 
-export default TaskInput;
+export default TextInput;

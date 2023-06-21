@@ -34,7 +34,7 @@ export function DesktopToDoTemplate({
     <div>
       <div className="ImageBckg" />
       <div className="DesktopToDoTemplate">
-        <Header onEnterPress={onAddNewTask} />
+        <Header onSubmit={onAddNewTask} />
         <div className="Content">
           <TaskList
             tasks={filteredTasks?.length > 0 ? filteredTasks : []}
