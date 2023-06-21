@@ -8,7 +8,7 @@ describe('TextInput', () => {
     const placeholder = "Write new task and press Enter";
     const { getByPlaceholderText } = render(<TextInput onSubmit={() => {}} placeholder={placeholder} />);
     const inputElement = getByPlaceholderText(placeholder);
-  
+
     expect(inputElement).toBeInTheDocument();
   });
 
@@ -16,15 +16,15 @@ describe('TextInput', () => {
     const placeholder = "Enter data";
     const { getByPlaceholderText } = render(<TextInput onSubmit={() => {}} />);
     const inputElement = getByPlaceholderText(placeholder);
-  
+
     expect(inputElement).toBeInTheDocument();
   });
-  
+
   test('renders input with correct className', () => {
     const placeholder = "Write new task and press Enter";
     const { getByPlaceholderText } = render(<TextInput onSubmit={() => {}} placeholder={placeholder}/>);
     const inputElement = getByPlaceholderText(placeholder);
-  
+
     expect(inputElement).toHaveClass('TextInput');
   });
 
