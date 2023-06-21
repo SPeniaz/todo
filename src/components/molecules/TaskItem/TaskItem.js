@@ -5,7 +5,7 @@ import { Task } from "../../atoms/Task/Task";
 import { TaskDeleteBtn } from "../../atoms/TaskDeleteBtn/TaskDeleteBtn";
 import "./TaskItem.css";
 
-import {TaskCompletedCheckBox} from "../../atoms/TaskCompletedCheckBox/TaskCompletedCheckBox";
+import {CheckBox} from "../../atoms/CheckBox/CheckBox";
 
 export function TaskItem({ task, onDeleteTask, onMarkCompleted, ...props }) {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({
@@ -19,9 +19,9 @@ export function TaskItem({ task, onDeleteTask, onMarkCompleted, ...props }) {
 
   return (
     <div className="TaskItem" style={style} ref={setNodeRef} {...attributes} {...listeners}>
-      <TaskCompletedCheckBox
+      <CheckBox
         checked={task.completed}
-        onCheck={(checked) => onMarkCompleted({ id: task.id, completed: checked })}
+        onChange={(checked) => onMarkCompleted({ id: task.id, completed: checked })}
       />
       <Task description={task.description} completed={task.completed}/>
       <TaskDeleteBtn onDeleteClick={onDeleteTask} taskId={task.id} />
