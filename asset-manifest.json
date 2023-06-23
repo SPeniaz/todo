@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/todo/static/css/main.4fbcc22f.css",
-    "main.js": "/todo/static/js/main.4c88f8d8.js",
+    "main.css": "/todo/static/css/main.a13a1efe.css",
+    "main.js": "/todo/static/js/main.fa346107.js",
     "static/media/swiss.jpg": "/todo/static/media/swiss.ce6cf565f77ead969118.jpg",
     "index.html": "/todo/index.html",
-    "main.4fbcc22f.css.map": "/todo/static/css/main.4fbcc22f.css.map",
-    "main.4c88f8d8.js.map": "/todo/static/js/main.4c88f8d8.js.map"
+    "main.a13a1efe.css.map": "/todo/static/css/main.a13a1efe.css.map",
+    "main.fa346107.js.map": "/todo/static/js/main.fa346107.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fbcc22f.css",
-    "static/js/main.4c88f8d8.js"
+    "static/css/main.a13a1efe.css",
+    "static/js/main.fa346107.js"
   ]
 }
