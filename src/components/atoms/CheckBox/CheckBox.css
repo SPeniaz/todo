@@ -10,6 +10,7 @@
   outline: none;
   cursor: pointer;
 }
+
 .CheckBox:checked {
   background-color: gray;
 }
@@ -26,7 +27,7 @@
   border: none;
 }
 
-.TaskInActive{
+.TaskInActive {
   text-decoration: line-through;
   color: grey;
 }

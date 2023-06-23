@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import getFilteredTasks from '../../redux/selectors/TasksSelector';
 
 import { DesktopToDoTemplate } from '../templates/DesktopToDoTemplate';
-import './ToDoPage.css';
 import {
   addTask,
   deleteTask,

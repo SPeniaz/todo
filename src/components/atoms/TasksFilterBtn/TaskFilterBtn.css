@@ -9,7 +9,7 @@
   background-color: transparent;
 }
 
-.TaskFilterBtn:hover{
+.TaskFilterBtn:hover {
   color: cornflowerblue;
 }
 
@@ -17,4 +17,3 @@
 .Active {
   color: cornflowerblue;
 }
-

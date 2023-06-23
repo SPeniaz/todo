@@ -1,4 +1,4 @@
-.Footer{
+.Footer {
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -6,10 +6,10 @@
     margin-top: 10px;
 }
 
-.Footer .TaskCounter{
+.Footer .TaskCounter {
     margin-left: 20px;
 }
 
-.Footer .TaskFilterBtn{
+.Footer .TaskFilterBtn {
     margin-right: 20px;
 }

@@ -22,21 +22,23 @@ export function TaskList({ tasks, onDeleteTask, onMarkCompleted, onReoderTasks }
   };
 
   return (
-    <div className="TaskList">
+    <ul className="TaskList">
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDtragEnd}>
         <SortableContext items={tasks} strategy={verticalListSortingStrategy}>
           {tasks.map((task) => (
-            <TaskItem
-              key={task.id}
-              id={task.id}
-              task={task}
-              onDeleteTask={onDeleteTask}
-              onMarkCompleted={onMarkCompleted}
-            />
+            <li key={task.id}>
+              <TaskItem
+                key={task.id}
+                id={task.id}
+                task={task}
+                onDeleteTask={onDeleteTask}
+                onMarkCompleted={onMarkCompleted}
+              />
+            </li>
           ))}
         </SortableContext>
       </DndContext>
-    </div>
+    </ul>
   );
 }
 

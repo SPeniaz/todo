@@ -1,11 +1,10 @@
-.DeleteBtn
-{
+.Button {
     width: 20px;
     height: 20px;
     border: none;
     background-color: transparent;
 }
 
-.DeleteBtn:hover{
+.Button:hover {
     color: cornflowerblue;
 }
