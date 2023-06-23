@@ -1,0 +1,33 @@
+.CheckBox {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.CheckBox:checked {
+  background-color: gray;
+}
+
+.Task {
+  height: 20px;
+  width: 100%;
+  padding-left: 20px;
+  text-align: left;
+  line-height: 20px;
+  font-family: Jost, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.TaskInActive {
+  text-decoration: line-through;
+  color: grey;
+}

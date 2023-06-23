@@ -1,0 +1,12 @@
+.TextInput {
+  height: 40px;
+  width: 100%;
+  text-align: left;
+  font-family: Jost, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin: 20px 0 20px 0;
+}

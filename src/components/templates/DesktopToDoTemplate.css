@@ -1,0 +1,17 @@
+.ImageBckg {
+  background: url(../../resources/images/swiss.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.DesktopToDoTemplate {
+  margin: -200px auto 0;
+  min-width: 500px;
+  width: 50%;
+}
+
+.Content {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}

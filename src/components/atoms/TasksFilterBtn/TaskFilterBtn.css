@@ -1,0 +1,19 @@
+.TaskFilterBtn {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-family: Jost, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+}
+
+.TaskFilterBtn:hover {
+  color: cornflowerblue;
+}
+
+
+.Active {
+  color: cornflowerblue;
+}
