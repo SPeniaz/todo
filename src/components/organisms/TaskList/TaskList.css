@@ -1,4 +1,7 @@
 .TaskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     background: white;
     border-radius: 5px;
 }
